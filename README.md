@@ -4,7 +4,8 @@ This repository contains the implementation of Customized Artificial Neural Netw
 
 
 ![img](Github_page/structures.png)
-ANN models with different structures. (a) ANN\_F model that treats all variables as inputs to an MLP. (b) ANN\_S model that only considers the longitude and latitude interactions, and then combines the output of an MLP with other variables. (c) ANN\_ST model that considers the space-time interactions. (d) An example of a customized ANN that includes multiple non-linear terms.
+*ANN models with different structures. (a) ANN\_F model that treats all variables as inputs to an MLP. (b) ANN\_S model that only considers the longitude and latitude interactions, and then combines the output of an MLP with other variables. (c) ANN\_ST model that considers the space-time interactions. (d) An example of a customized ANN that includes multiple non-linear terms.*
+
 
 
 
