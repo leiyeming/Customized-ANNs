@@ -4,6 +4,7 @@ This repository contains the implementation of Customized Artificial Neural Netw
 
 
 Features
+1. First item
 Customized ANNs tailored to specific fisheries and ecological systems
 Improved interpretability for better understanding of underlying relationships
 Resilience to overfitting, enhancing model generalization capabilities
