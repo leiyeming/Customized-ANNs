@@ -8,7 +8,7 @@ torch.manual_seed(1)
 # True: train a new model; False: load a trained model
 model_train = True
 
-# check if a GPU is available
+# check if a GPU is available use GPU otherwise use CPU
 if torch.cuda.is_available():
     device = torch.device('cuda:1')
 else:
