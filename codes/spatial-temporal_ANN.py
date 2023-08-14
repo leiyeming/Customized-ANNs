@@ -98,10 +98,10 @@ criterion = nn.MSELoss()
 ## define the dataset and early stopping
 dataset = DatasetWrapper_ANN_S_ST(X_tr_nl,X_tr_l, torch.log(y_tr))
 # early stopping
-early_stopping = EarlyStopping(patience=500, verbose=False,loc=loc,NN_str=NN_str)
+early_stopping = EarlyStopping(patience=300, verbose=False,loc=loc,NN_str=NN_str)
 ######### model training  #########
 if model_train:
-    train_ANN_S_ST(net, optimizer, dataset, batch_size=100, nepochs=8000, val_nl=X_tr_nl, val_l=X_tr_l,
+    train_ANN_S_ST(net, optimizer, dataset, batch_size=100, nepochs=3000, val_nl=X_tr_nl, val_l=X_tr_l,
                 val_y=y_tr, device=device, scenario=scenario, NN_str=NN_str, early_stopping=early_stopping,
                 criterion=criterion)
 # load best model
