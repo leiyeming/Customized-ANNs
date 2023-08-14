@@ -1,6 +1,6 @@
 # Customized ANNs for CPUE Standardization
 
-This repository contains the implementation of Customized Artificial Neural Networks (ANNs) or spatial-temporal ANNs for CPUE (Catch Per Unit Effort) standardization in fisheries management. The customized ANNs are tailored to address challenges related to overfitting and lack of interpretability, offering improved accuracy and insights into fish abundance trends (standardised CPUE) and distribution patterns.
+This repository contains the implementation of Customized Artificial Neural Networks (ANNs) or spatial-temporal ANNs for CPUE (Catch Per Unit Effort) standardization in fisheries management. The customized ANNs are tailored to address challenges related to overfitting and lack of interpretability, offering improved accuracy and insights into fish abundance trends (standardised CPUE) and distribution patterns. The dynamics of fish distribution and fishing locations are available within the "additional figures" directory.
 
 ## Features
 1. Customized ANNs tailored to specific fisheries and ecological systems
