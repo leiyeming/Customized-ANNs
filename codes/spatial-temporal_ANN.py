@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r'C:\Users\lei06f\Documents\GitHub\Customized-ANNs\codes')
+sys.path.append(r'\GitHub\Customized-ANNs\codes')
 from C_ANN_fucs import *
 
 # set random seeds for reproducibility
@@ -14,11 +14,11 @@ if torch.cuda.is_available():
 else:
     device = torch.device('cpu')
 
-loc = 'C:/Users/lei06f/Documents/GitHub/Customized-ANNs/data/'
+loc = '\GitHub\Customized-ANNs\data\'
 scenario=2
 scenario=str(scenario)
 # Load train, test, and two prediction datasets from CSV files.
-# need to combine all datasets to get the same dummy variables (categorical variables onehot encoding and continue variables normalization)
+# need to combine all datasets to get the same dummy variables (categorical variables one-hot encoding and continue variables normalization)
 
 feature_names = ['lon', 'lat', 'yr', 'vess', 'tech_1', 'tech_2']
 cat_cols = ['vess', 'yr']
