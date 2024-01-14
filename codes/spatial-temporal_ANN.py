@@ -14,7 +14,7 @@ if torch.cuda.is_available():
 else:
     device = torch.device('cpu')
 
-loc = '\GitHub\Customized-ANNs\data\'
+loc = '\GitHub\Customized-ANNs\data\s2_data\'
 scenario=2
 scenario=str(scenario)
 # Load train, test, and two prediction datasets from CSV files.
@@ -78,7 +78,7 @@ X_tr_l, X_ts_l, X_pred_l, X_pred_all_l= split_data(new_data_l, train_row,test_ro
 
 ## define the model,
 # Since we only use MLP for the spatial-temporal variables, we only need to define one MLP and combine the output with the other variables.
-neuron=[16,16,16]
+neuron=[64,64,64]
 print("neuron:", neuron)
 NN_str = "ANN_ST_"
 for j in neuron:
