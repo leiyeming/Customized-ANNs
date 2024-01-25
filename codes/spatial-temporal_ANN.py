@@ -91,8 +91,8 @@ net=net.to(device)
 
 
 ## define the optimizer and loss function
-# optimizer = SGD(net.parameters(), lr=1e-2)
-optimizer = Adam(net.parameters())
+optimizer = SGD(net.parameters())
+# optimizer = Adam(net.parameters())
 criterion = nn.MSELoss()
 
 ## define the dataset and early stopping
