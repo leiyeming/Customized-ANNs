@@ -1,29 +1,28 @@
 # Customized ANNs for CPUE Standardization
+This repository implements Customized Artificial Neural Networks (ANNs) for CPUE (Catch Per Unit Effort) standardization in fisheries management. Our models address overfitting and interpretability challenges, providing improved accuracy in fish abundance trends (standardized CPUE) and distribution patterns. Visualizations of fish distribution and fishing locations for all scenarios are available in the "additional figures" directory.
+Features
 
-This repository contains the implementation of Customized Artificial Neural Networks (ANNs) or spatial-temporal ANNs for CPUE (Catch Per Unit Effort) standardization in fisheries management. The customized ANNs are tailored to address challenges related to overfitting and lack of interpretability, offering improved accuracy and insights into fish abundance trends (standardised CPUE) and distribution patterns. The dynamics of fish distribution and fishing locations for all three scenarios are available within the "additional figures" directory.
+- ANNs tailored to specific fisheries and ecological systems
+- Spatial-temporal modules for dynamic fish distribution modeling
+- Enhanced interpretability of underlying relationships
+- Overfitting mitigation for better model generalization
 
-## Features
-1. Customized ANNs tailored to specific fisheries and ecological systems
-2. Incorporation of spatial-temporal modules for dynamic fish distribution patterns
-3. Improved interpretability for a better understanding of underlying relationships
-4. Resilience to overfitting, enhancing model generalization capabilities
-   
-To address the challenges of interpreting ANNs and mitigate overfitting caused by model complexity, we introduced two customized ANN models, namely, ANN S and ANN ST, based on assumptions on the dependence structure. 
-ANN S has a spatial module taking the longitude and the latitude as the input, and the output of the spatial module is then fed to the output neuron together with other explanatory variables. 
-This allows the catch to depend nonlinearly on the location, but the spatial distribution of
-the fish is assumed to be the same for all years. On the other hand, the ANN ST model
-includes a spatial-temporal module, which takes longitude, latitude, and year as inputs.
-Unlike the spatial module that only considers spatial information, the spatial-temporal
-module incorporates temporal information as well. This allows the model to account for
-potential variations and trends in fish distribution that may occur over time, providing a
-more comprehensive and dynamic representation of the data. The outputs of spatial and
-spatial-temporal modules, f (lon, lat) and f (lon, lat, year), are then combined with other
-variables respectively (a graphic comparison between these two modified ANNs and the
-original ANN can be found in the figure beneath).
+We introduce two customized ANN models - ANN S and ANN ST - designed to improve interpretability and reduce overfitting:
 
+- ANN S: Incorporates a spatial module using longitude and latitude as inputs. The spatial module's output feeds into the final output neuron along with other explanatory variables, allowing nonlinear spatial dependence while assuming consistent fish distribution across years.
+- ANN ST: Features a spatial-temporal module accepting longitude, latitude, and year as inputs. This design accounts for potential temporal variations in fish distribution, offering a more dynamic data representation.
+
+Both models combine their respective module outputs (f(lon, lat) for ANN S and f(lon, lat, year) for ANN ST) with other variables to produce the final output. A comparative illustration of these modified ANNs and the original ANN is provided in the figure below.
+
+
+Figure illustrates various ANN model structures for CPUE standardization:
+a) ANN_F: A standard multilayer perceptron (MLP) that uses all variables as direct inputs.
+b) ANN_S: Incorporates a dedicated spatial module processing longitude and latitude interactions. The output of this module is then combined with other variables.
+c) ANN_ST: Features a spatial-temporal module to capture interactions between location (longitude and latitude) and time.
+d) Customized ANN: An example structure incorporating multiple non-linear terms for more complex relationships.
+The code directory includes implementations for constructing and running the ANN_ST model (structure c).
 
 ![img](Github_page/structures.png)
-*ANN models with different structures. (a) ANN\_F model that treats all variables as inputs to an MLP. (b) ANN\_S model that only considers the longitude and latitude interactions, and then combines the output of an MLP with other variables. (c) ANN\_ST model that considers the space-time interactions. (d) An example of a customized ANN that includes multiple non-linear terms. The codes for constructing and executing the (c) structure are incorporated into the code directory.*
 
 
 
